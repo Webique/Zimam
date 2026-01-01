@@ -1,0 +1,64 @@
+{
+  "IndexPage": {
+    "hero": {
+
+    },
+    "WhatsAppFloat": {
+      "tooltip": "Contact us via WhatsApp"
+    }
+  },
+  "Error": {
+    "title": "Sorry, an unexpected error occurred!",
+    "description": "<p>We apologize for this error we encountered.</p><p>You can try <retry>reloading the page</retry> you were visiting.</p>"
+  },
+  "NotFoundPage": {
+    "title": "Page not found",
+    "description": "Sorry, please check the address bar in your browser or use the navigation to go to a known page.",
+    "retryButton": "Try again",
+    "contactSupport": "Contact support",
+    "goBack": "Go back",
+    "backToHome": "Back to home"
+  },
+  "LocaleLayout": {
+    "name": "Bite Box | Specialized Cloud Kitchens",
+    "short_name": "Bite Box",
+    "description": "Bite Box Cloud Kitchens - Specialized cloud kitchens for preparing delicious dishes and innovative operational solutions for food projects",
+    "keywords": ["Bite Box", "Cloud Kitchens", "Food Projects", "Entrepreneurs", "Restaurants", "Food Delivery", "Saudi Arabia"]
+  },
+  "LocaleSwitcher": {
+    "label": "Change language",
+    "locale": "{locale, select, ar {🇸🇦 Arabic} en {🇺🇸 English} other {Unknown}}"
+  },
+  "Header": {
+    "nav": {
+      "home": "Home",
+      "about": "Our Mission",
+      "services": "Services",
+      "features": "Features",
+      "contact": "Contact"
+    },
+    "cta": "Start Now",
+    "siteName": "Bite Box",
+    "siteDescription": "Cloud Kitchens"
+  },
+  "Footer": {
+    "home": "Home",
+    "about": "Our Mission",
+    "services": "Services",
+    "features": "Features",
+    "contact": "Contact",
+    "quickLinks": "Quick Links",
+    "contactUs": "Contact Us",
+    "connectWithUs": "Follow Us",
+    "phone": "Phone",
+    "email": "Email",
+    "location": "Saudi Arabia",
+    "whatsapp": "WhatsApp",
+    "brandName": "Bite Box",
+    "copyright": "© {year} Bite Box Cloud Kitchens. All rights reserved",
+    "allRightsReserved": "All rights reserved",
+    "companyDescription": "Specialized cloud kitchens providing complete infrastructure to operate your restaurant efficiently at lower costs. We help you enter the market with lower costs and risks compared to traditional restaurants.",
+    "followUs": "Follow Us",
+    "tagline": "Your bite faster – Your project easier"
+  }
+}

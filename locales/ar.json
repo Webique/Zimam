@@ -1,0 +1,63 @@
+{
+  "IndexPage": {
+    "hero": {
+    },
+    "WhatsAppFloat": {
+      "tooltip": "تواصل معنا عبر واتساب"
+    }
+  },
+  "Error": {
+    "title": "عذراً، حدث خطأ غير متوقع!",
+    "description": "<p>نعتذر عن هذا الخطأ الذي واجهناه.</p><p>يمكنكم محاولة <retry>إعادة تحميل الصفحة</retry> التي كنتم تزورونها.</p>"
+  },
+  "NotFoundPage": {
+    "title": "الصفحة المطلوبة غير موجودة",
+    "description": "نعتذر، يرجى التحقق من شريط العنوان في المتصفح أو استخدام التنقل للانتقال إلى صفحة معروفة.",
+    "retryButton": "إعادة المحاولة",
+    "contactSupport": "التواصل مع الدعم الفني",
+    "goBack": "العودة للخلف",
+    "backToHome": "العودة للصفحة الرئيسية"
+  },
+  "LocaleLayout": {
+    "name": "Bite Box | مطابخ سحابية متخصصة",
+    "short_name": "Bite Box",
+    "description": "Bite Box Cloud Kitchens - مطابخ سحابية متخصصة لتحضير أشهى الأطباق وتقديم حلول تشغيل مبتكرة للمشاريع الغذائية",
+    "keywords": ["Bite Box", "مطابخ سحابية", "Cloud Kitchens", "مشاريع غذائية", "رواد أعمال", "مطاعم", "توصيل طعام", "السعودية"]
+  },
+  "LocaleSwitcher": {
+    "label": "تغيير اللغة",
+    "locale": "{locale, select, ar {🇸🇦 العربية} en {🇺🇸 الإنجليزية} other {غير معروف}}"
+  },
+  "Header": {
+    "nav": {
+      "home": "الرئيسية",
+      "about": "رسالتنا",
+      "services": "خدماتنا",
+      "features": "المميزات",
+      "contact": "تواصل معنا"
+    },
+    "cta": "ابدأ الآن",
+    "siteName": "Bite Box",
+    "siteDescription": "Cloud Kitchens"
+  },
+  "Footer": {
+    "home": "الرئيسية",
+    "about": "رسالتنا",
+    "services": "خدماتنا",
+    "features": "المميزات",
+    "contact": "تواصل معنا",
+    "quickLinks": "روابط سريعة",
+    "contactUs": "تواصل معنا",
+    "connectWithUs": "تابعنا",
+    "phone": "الهاتف",
+    "email": "البريد الإلكتروني",
+    "location": "المملكة العربية السعودية",
+    "whatsapp": "واتساب",
+    "brandName": "Bite Box",
+    "copyright": "© {year} Bite Box Cloud Kitchens. جميع الحقوق محفوظة",
+    "allRightsReserved": "جميع الحقوق محفوظة",
+    "companyDescription": "مطابخ سحابية متخصصة توفر البنية التحتية الكاملة لتشغيل مطعمك بكفاءة عالية وتكلفة أقل. نساعدك على دخول السوق بتكاليف ومخاطر أقل مقارنة بالمطعم التقليدي.",
+    "followUs": "تابعنا على",
+    "tagline": "لقمتك أسرع – مشروعك أسهل"
+  }
+}
