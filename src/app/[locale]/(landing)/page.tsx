@@ -16,7 +16,7 @@ export default function IndexPage({ params }: PageProps) {
   setRequestLocale(locale as Locale);
 
   return (
-    <main id="main-content" role="main" className="overflow-hidden">
+    <main id="main-content" role="main">
       {/* Hero Section - No wrapper needed as it's above the fold */}
       <Hero />
 
