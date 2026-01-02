@@ -12,6 +12,8 @@ import { routing } from "@/i18n/routing.public";
 
 import Document from "../document";
 
+import ClientAccessibilityWrapper from "./client-accessibility-wrapper";
+
 export const dynamic = "force-static";
 
 type Params = Promise<{ locale: Locale }>;
@@ -122,7 +124,9 @@ export default async function LocaleLayout({
     <Document locale={locale} direction={direction}>
       <NextIntlClientProvider>
         <RootProviders direction={direction}>
-          <Layout>{children}</Layout>
+          <ClientAccessibilityWrapper>
+            <Layout>{children}</Layout>
+          </ClientAccessibilityWrapper>
         </RootProviders>
       </NextIntlClientProvider>
     </Document>

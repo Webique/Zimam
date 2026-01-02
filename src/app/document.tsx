@@ -20,7 +20,21 @@ export default function Document({ children, locale, direction }: Props) {
       lang={locale}
       style={{ height: "100%" }}
     >
-      <head />
+      <head>
+        {/* Preload critical resources */}
+        <link
+          rel="preload"
+          href="/images/logo.png"
+          as="image"
+          type="image/png"
+        />
+        {/* DNS prefetch for external resources */}
+        <link rel="dns-prefetch" href="//wa.me" />
+        <link rel="dns-prefetch" href="//snapchat.com" />
+        <link rel="dns-prefetch" href="//twitter.com" />
+        {/* Preconnect to critical third-party origins */}
+        <link rel="preconnect" href="https://wa.me" crossOrigin="anonymous" />
+      </head>
       <body
         suppressHydrationWarning
         className={cn(

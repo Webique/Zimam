@@ -32,29 +32,31 @@ export default function Header() {
     { label: t("nav.home"), href: "/" },
     { label: t("nav.about"), href: "#about" },
     { label: t("nav.services"), href: "#services" },
-    { label: t("nav.features"), href: "#features" },
     { label: t("nav.contact"), href: "#contact" }
   ];
 
   return (
     <header
+      id="navigation"
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-500",
         "shadow-primary/5 bg-white/95 shadow-lg lg:bg-transparent lg:shadow-none",
         isScrolled && "backdrop-blur-lg lg:bg-white/95 lg:shadow-lg"
       )}
+      role="banner"
     >
       {/* Top accent line */}
       <div
         className={cn(
-          "bg-linear-to-r from-primary via-accent to-primary absolute inset-x-0 top-0 h-1 transition-opacity duration-500",
+          "bg-linear-to-r from-law-primary via-law-accent to-law-primary absolute inset-x-0 top-0 h-1 transition-opacity duration-500",
           "opacity-100 lg:opacity-0",
           isScrolled && "lg:opacity-100"
         )}
+        aria-hidden="true"
       />
 
-      <div className="container mx-auto px-4">
-        <div className="flex h-20 items-center justify-between lg:h-24">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="flex h-16 items-center justify-between sm:h-20 lg:h-24">
           {/* Logo */}
           <m.div
             initial={{ opacity: 0, x: -20 }}
@@ -66,7 +68,11 @@ export default function Header() {
           </m.div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden items-center gap-1 lg:flex">
+          <nav
+            className="hidden items-center gap-1 lg:flex"
+            role="navigation"
+            aria-label="Main navigation"
+          >
             {navItems.map((item, index) => (
               <m.div
                 key={index}
@@ -79,9 +85,9 @@ export default function Header() {
                   className={cn(
                     "group relative px-4 py-2 text-sm font-medium transition-all duration-300",
                     isScrolled
-                      ? "text-secondary hover:text-primary"
+                      ? "text-law-secondary hover:text-law-primary"
                       : "text-white/90 hover:text-white",
-                    "hover:bg-primary/10 rounded-full"
+                    "hover:bg-law-primary/10 focus:ring-law-primary rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2"
                   )}
                 >
                   <span className="relative z-10">{item.label}</span>
@@ -101,15 +107,19 @@ export default function Header() {
 
             <Button
               size="lg"
-              className="bg-primary shadow-primary/30 hover:bg-brand-orange-dark hover:shadow-primary/40 group h-11 min-w-[110px] gap-2 rounded-full px-6 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+              className="bg-law-primary shadow-law-primary/30 hover:bg-law-primary-dark hover:shadow-law-primary/40 focus:ring-law-primary group h-10 min-w-[100px] gap-2 rounded-full px-4 text-xs font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-offset-2 sm:h-11 sm:min-w-[110px] sm:px-6 sm:text-sm"
               asChild
             >
               <Link
                 href={siteConfig.links.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Contact us via WhatsApp"
               >
-                <MessageCircle className="h-4 w-4 transition-transform group-hover:scale-110" />
+                <MessageCircle
+                  className="h-4 w-4 transition-transform group-hover:scale-110"
+                  aria-hidden="true"
+                />
                 {t("cta")}
               </Link>
             </Button>
@@ -120,9 +130,11 @@ export default function Header() {
             <LocaleSwitcher className="w-auto" isTop={isScrolled} />
 
             <button
-              className="text-secondary hover:bg-primary/10 rounded-lg p-2 transition-all duration-300"
+              className="text-law-secondary hover:bg-law-primary/10 focus:ring-law-primary rounded-lg p-2 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2"
               onClick={toggleMenu}
-              aria-label="Toggle menu"
+              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isMenuOpen}
+              aria-controls="mobile-menu"
             >
               <div className="space-y-1.5">
                 <m.div
@@ -151,6 +163,7 @@ export default function Header() {
 
         {/* Mobile Menu */}
         <m.div
+          id="mobile-menu"
           initial={false}
           animate={{
             height: isMenuOpen ? "auto" : 0,
@@ -158,8 +171,13 @@ export default function Header() {
           }}
           transition={{ duration: 0.4, ease: "easeInOut" }}
           className="overflow-hidden lg:hidden"
+          aria-hidden={!isMenuOpen}
         >
-          <nav className="space-y-1 py-6">
+          <nav
+            className="space-y-1 py-4 sm:py-6"
+            role="navigation"
+            aria-label="Mobile navigation"
+          >
             {navItems.map((item, index) => (
               <m.div
                 key={index}
@@ -173,7 +191,7 @@ export default function Header() {
                 <Link
                   href={item.href}
                   onClick={() => setIsMenuOpen(false)}
-                  className="text-secondary hover:bg-primary/10 hover:text-primary block rounded-xl px-4 py-3 text-base font-medium transition-all"
+                  className="text-law-secondary hover:bg-law-primary/10 hover:text-law-primary focus:ring-law-primary block rounded-xl px-4 py-3 text-base font-medium transition-all focus:outline-none focus:ring-2 focus:ring-offset-2"
                 >
                   {item.label}
                 </Link>
@@ -188,10 +206,10 @@ export default function Header() {
                 y: isMenuOpen ? 0 : -20
               }}
               transition={{ delay: 0.5, duration: 0.4 }}
-              className="mt-4 px-4 pt-4"
+              className="mt-3 px-4 pt-3 sm:mt-4 sm:pt-4"
             >
               <Button
-                className="bg-primary hover:bg-brand-orange-dark h-12 w-full gap-3 rounded-xl text-base font-semibold text-white shadow-lg transition-all"
+                className="bg-law-primary hover:bg-law-primary-dark focus:ring-law-primary h-11 w-full gap-3 rounded-xl text-base font-semibold text-white shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 sm:h-12"
                 asChild
               >
                 <a
@@ -199,8 +217,9 @@ export default function Header() {
                   rel="noopener noreferrer"
                   href={siteConfig.links.whatsapp}
                   onClick={() => setIsMenuOpen(false)}
+                  aria-label="Contact us via WhatsApp"
                 >
-                  <MessageCircle className="h-5 w-5" />
+                  <MessageCircle className="h-5 w-5" aria-hidden="true" />
                   {t("cta")}
                 </a>
               </Button>

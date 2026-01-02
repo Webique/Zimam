@@ -19,7 +19,7 @@ export default function WhatsAppFloat() {
           href={siteConfig.links.whatsapp}
           target="_blank"
           rel="noreferrer"
-          className="z-999999 bg-whatsapp fixed bottom-6 end-6 flex h-14 w-14 items-center justify-center rounded-full shadow-lg transition-all duration-300 hover:scale-110 hover:shadow-xl lg:bottom-6"
+          className="z-999999 bg-whatsapp fixed bottom-4 end-4 flex h-12 w-12 items-center justify-center rounded-full shadow-lg transition-all duration-300 hover:scale-110 hover:shadow-xl sm:bottom-6 sm:end-6 sm:h-14 sm:w-14 lg:bottom-6"
           aria-label="Contact us on WhatsApp"
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -27,7 +27,7 @@ export default function WhatsAppFloat() {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
         >
-          <WhatsAppIcon className="h-8 w-8 fill-white" />
+          <WhatsAppIcon className="h-6 w-6 fill-white sm:h-8 sm:w-8" />
         </m.a>
       </TooltipTrigger>
       <TooltipContent side="right">

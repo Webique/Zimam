@@ -41,137 +41,127 @@
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
 
-  /* Brand Colors - Exposed to Tailwind */
-  --color-brand-orange: var(--brand-orange);
-  --color-brand-orange-light: var(--brand-orange-light);
-  --color-brand-orange-dark: var(--brand-orange-dark);
-  --color-brand-yellow: var(--brand-yellow);
-  --color-brand-yellow-light: var(--brand-yellow-light);
-  --color-brand-green: var(--brand-green);
-  --color-brand-green-dark: var(--brand-green-dark);
-  --color-brand-blue: var(--brand-blue);
-  --color-brand-purple: var(--brand-purple);
-  --color-brand-red: var(--brand-red);
-  --color-brand-dark: var(--brand-dark);
-  --color-brand-dark-light: var(--brand-dark-light);
-  --color-brand-cream: var(--brand-cream);
-  --color-brand-warm-white: var(--brand-warm-white);
+  /* Law Firm Brand Colors - Exposed to Tailwind */
+  --color-law-primary: var(--law-primary);
+  --color-law-primary-light: var(--law-primary-light);
+  --color-law-primary-dark: var(--law-primary-dark);
+  --color-law-secondary: var(--law-secondary);
+  --color-law-accent: var(--law-accent);
+  --color-law-text: var(--law-text);
+  --color-law-text-light: var(--law-text-light);
+  --color-law-background: var(--law-background);
+  --color-law-background-alt: var(--law-background-alt);
   --color-whatsapp: var(--whatsapp);
 }
 
 :root {
   --radius: 0.625rem;
 
-  /* Bite Box Brand Colors - Fresh & Modern Food Theme */
-  --brand-orange: #FF6B35;
-  --brand-orange-light: #FF8C5A;
-  --brand-orange-dark: #E55A2B;
-  --brand-yellow: #FFB800;
-  --brand-yellow-light: #FFCC33;
-  --brand-green: #2ECC71;
-  --brand-green-dark: #27AE60;
-  --brand-blue: #3498DB;
-  --brand-purple: #9B59B6;
-  --brand-red: #E74C3C;
-  --brand-dark: #1A1A2E;
-  --brand-dark-light: #16213E;
-  --brand-cream: #FFF8F0;
-  --brand-warm-white: #FFFCF9;
+  /* زمام الرأي Law Firm Brand Colors - Professional & Trustworthy */
+  --law-primary: #A19668;
+  --law-primary-light: #B8A67A;
+  --law-primary-dark: #8A7F56;
+  --law-secondary: #2C3E50;
+  --law-accent: #F8F9FA;
+  --law-text: #2C3E50;
+  --law-text-light: #6C757D;
+  --law-background: #FFFFFF;
+  --law-background-alt: #F8F9FA;
   --whatsapp: #25D366;
 
   /* Main backgrounds */
-  --background: var(--brand-warm-white);
-  --foreground: var(--brand-dark);
+  --background: var(--law-background);
+  --foreground: var(--law-text);
 
   /* Cards and elevated surfaces */
   --card: #ffffff;
-  --card-foreground: var(--brand-dark);
+  --card-foreground: var(--law-text);
   --popover: #ffffff;
-  --popover-foreground: var(--brand-dark);
+  --popover-foreground: var(--law-text);
 
-  /* Primary - Vibrant Orange */
-  --primary: var(--brand-orange);
+  /* Primary - Law Firm Gold */
+  --primary: var(--law-primary);
   --primary-foreground: #ffffff;
 
-  /* Secondary - Dark Navy */
-  --secondary: var(--brand-dark);
+  /* Secondary - Professional Navy */
+  --secondary: var(--law-secondary);
   --secondary-foreground: #ffffff;
 
   /* Muted elements */
-  --muted: var(--brand-cream);
-  --muted-foreground: #6b7280;
+  --muted: var(--law-background-alt);
+  --muted-foreground: var(--law-text-light);
 
-  /* Accent - Yellow */
-  --accent: var(--brand-yellow);
-  --accent-foreground: var(--brand-dark);
+  /* Accent - Light Gray */
+  --accent: var(--law-accent);
+  --accent-foreground: var(--law-text);
 
   /* Destructive */
   --destructive: #dc2626;
 
   /* Borders and inputs */
-  --border: #e8e4de;
-  --input: #e8e4de;
-  --ring: var(--brand-orange);
+  --border: #e5e7eb;
+  --input: #e5e7eb;
+  --ring: var(--law-primary);
 
   /* Charts */
-  --chart-1: var(--brand-orange);
-  --chart-2: var(--brand-yellow);
-  --chart-3: var(--brand-green);
-  --chart-4: var(--brand-dark);
-  --chart-5: var(--brand-orange-light);
+  --chart-1: var(--law-primary);
+  --chart-2: var(--law-primary-light);
+  --chart-3: var(--law-secondary);
+  --chart-4: var(--law-text);
+  --chart-5: var(--law-primary-dark);
 
   /* Sidebar */
   --sidebar: #ffffff;
-  --sidebar-foreground: var(--brand-dark);
-  --sidebar-primary: var(--brand-orange);
+  --sidebar-foreground: var(--law-text);
+  --sidebar-primary: var(--law-primary);
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: var(--brand-cream);
-  --sidebar-accent-foreground: var(--brand-dark);
-  --sidebar-border: #e8e4de;
-  --sidebar-ring: var(--brand-orange);
+  --sidebar-accent: var(--law-background-alt);
+  --sidebar-accent-foreground: var(--law-text);
+  --sidebar-border: #e5e7eb;
+  --sidebar-ring: var(--law-primary);
 }
 
 .dark {
-  --background: #0f1419;
+  --background: #1a1a1a;
   --foreground: #f9fafb;
 
-  --card: #1a1f26;
+  --card: #262626;
   --card-foreground: #f9fafb;
-  --popover: #1a1f26;
+  --popover: #262626;
   --popover-foreground: #f9fafb;
 
-  --primary: var(--brand-orange);
+  --primary: var(--law-primary);
   --primary-foreground: #ffffff;
 
-  --secondary: var(--brand-dark-light);
+  --secondary: var(--law-secondary);
   --secondary-foreground: #ffffff;
 
-  --muted: #2a2520;
-  --muted-foreground: #9ca3af;
+  --muted: #404040;
+  --muted-foreground: #a3a3a3;
 
-  --accent: var(--brand-yellow);
-  --accent-foreground: var(--brand-dark);
+  --accent: #404040;
+  --accent-foreground: #f9fafb;
 
   --destructive: #ef4444;
 
-  --border: #3a3530;
-  --input: #3a3530;
-  --ring: var(--brand-orange);
+  --border: #404040;
+  --input: #404040;
+  --ring: var(--law-primary);
 
-  --chart-1: var(--brand-orange);
-  --chart-2: var(--brand-yellow);
-  --chart-3: var(--brand-green);
-  --chart-4: var(--brand-dark);
-  --chart-5: var(--brand-orange-light);
+  --chart-1: var(--law-primary);
+  --chart-2: var(--law-primary-light);
+  --chart-3: var(--law-secondary);
+  --chart-4: var(--law-text);
+  --chart-5: var(--law-primary-dark);
 
-  --sidebar: #1a1f26;
+  --sidebar: #262626;
   --sidebar-foreground: #f9fafb;
-  --sidebar-primary: var(--brand-orange);
+  --sidebar-primary: var(--law-primary);
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #2a2520;
+  --sidebar-accent: #404040;
   --sidebar-accent-foreground: #f9fafb;
-  --sidebar-border: #3a3530;
-  --sidebar-ring: var(--brand-orange);
+  --sidebar-border: #404040;
+  --sidebar-ring: var(--law-primary);
 }
 
 @layer base {
@@ -265,24 +255,24 @@
     scroll-padding-top: 6rem;
   }
 
-  /* Bite Box shadows */
+  /* Law Firm shadows */
   .shadow-elegant {
-    box-shadow: 0 10px 40px -10px rgba(255, 107, 53, 0.2);
+    box-shadow: 0 10px 40px -10px rgba(161, 150, 104, 0.2);
   }
 
   .glow-primary {
-    box-shadow: 0 0 20px rgba(255, 107, 53, 0.3);
+    box-shadow: 0 0 20px rgba(161, 150, 104, 0.3);
   }
 
   .glow-primary-lg {
-    box-shadow: 0 0 40px rgba(255, 107, 53, 0.2);
+    box-shadow: 0 0 40px rgba(161, 150, 104, 0.2);
   }
 
   /* Decorative patterns */
   .pattern-dots {
     background-image: radial-gradient(
       circle,
-      rgba(255, 107, 53, 0.1) 1px,
+      rgba(161, 150, 104, 0.1) 1px,
       transparent 1px
     );
     background-size: 20px 20px;
@@ -290,8 +280,8 @@
 
   .pattern-grid {
     background-image:
-      linear-gradient(rgba(255, 107, 53, 0.05) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255, 107, 53, 0.05) 1px, transparent 1px);
+      linear-gradient(rgba(161, 150, 104, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(161, 150, 104, 0.05) 1px, transparent 1px);
     background-size: 40px 40px;
   }
 
@@ -299,16 +289,16 @@
   .gradient-overlay-primary {
     background: linear-gradient(
       135deg,
-      rgba(255, 107, 53, 0.1) 0%,
-      rgba(255, 184, 0, 0.05) 100%
+      rgba(161, 150, 104, 0.1) 0%,
+      rgba(184, 166, 122, 0.05) 100%
     );
   }
 
   .gradient-overlay-secondary {
     background: linear-gradient(
       135deg,
-      rgba(26, 26, 46, 0.1) 0%,
-      rgba(22, 33, 62, 0.05) 100%
+      rgba(44, 62, 80, 0.1) 0%,
+      rgba(44, 62, 80, 0.05) 100%
     );
   }
 
@@ -321,10 +311,10 @@
   }
 
   .glass-dark {
-    background: rgba(26, 26, 46, 0.8);
+    background: rgba(44, 62, 80, 0.8);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 107, 53, 0.2);
+    border: 1px solid rgba(161, 150, 104, 0.2);
   }
 }
 
@@ -377,6 +367,101 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Accessibility: Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Accessibility: Reduced motion class for JavaScript control */
+.reduce-motion *,
+.reduce-motion *::before,
+.reduce-motion *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+}
+
+.reduce-motion {
+  scroll-behavior: auto !important;
+}
+
+/* Accessibility: Enhanced focus styles for keyboard users */
+.keyboard-user *:focus {
+  outline: 3px solid var(--law-primary) !important;
+  outline-offset: 2px !important;
+}
+
+.keyboard-user button:focus,
+.keyboard-user a:focus,
+.keyboard-user [role="button"]:focus {
+  box-shadow: 0 0 0 3px rgba(161, 150, 104, 0.3) !important;
+}
+
+/* Accessibility: High contrast mode */
+.high-contrast {
+  --law-primary: #000000;
+  --law-text: #000000;
+  --law-text-light: #333333;
+  --law-background: #ffffff;
+  --law-background-alt: #f0f0f0;
+}
+
+.high-contrast * {
+  border-color: #000000 !important;
+}
+
+.high-contrast button,
+.high-contrast a {
+  border: 2px solid #000000 !important;
+}
+
+/* Accessibility: Font size adjustments */
+.font-large {
+  font-size: 1.125em;
+}
+
+.font-extra-large {
+  font-size: 1.25em;
+}
+
+/* Accessibility: Skip links */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: var(--law-primary);
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 4px;
+  z-index: 1000;
+  font-weight: bold;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* Accessibility: Screen reader only content */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .fade-in-up {
   animation: fadeInUp 0.6s ease-out;
 }
@@ -419,7 +504,7 @@ html {
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(255, 107, 53, 0.1),
+    rgba(161, 150, 104, 0.1),
     transparent
   );
   background-size: 200% 100%;
@@ -428,10 +513,10 @@ html {
 
 @keyframes pulse-glow {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(255, 107, 53, 0.4);
+    box-shadow: 0 0 20px rgba(161, 150, 104, 0.4);
   }
   50% {
-    box-shadow: 0 0 40px rgba(255, 107, 53, 0.6);
+    box-shadow: 0 0 40px rgba(161, 150, 104, 0.6);
   }
 }
 
