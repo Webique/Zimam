@@ -139,7 +139,7 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="grid gap-4 sm:grid-cols-2 sm:gap-6"
+            className="grid gap-4 sm:grid-cols-2 sm:grid-rows-2 sm:gap-6"
             role="list"
             aria-label="Our key strengths"
           >
@@ -154,8 +154,9 @@ export default function About() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
                   role="listitem"
+                  className="h-48 sm:h-52"
                 >
-                  <Card className="focus-within:ring-law-primary group h-full border-0 bg-white shadow-md transition-all duration-300 focus-within:ring-2 focus-within:ring-offset-2 hover:-translate-y-1 hover:shadow-lg">
+                  <Card className="focus-within:ring-law-primary group flex h-full flex-col gap-0 border-0 bg-white shadow-md transition-all duration-300 focus-within:ring-2 focus-within:ring-offset-2 hover:-translate-y-1 hover:shadow-lg">
                     <CardHeader className="pb-3 sm:pb-4">
                       <div
                         className="bg-law-primary/10 group-hover:bg-law-primary mb-3 flex h-10 w-10 items-center justify-center rounded-lg transition-all duration-300 sm:mb-4 sm:h-12 sm:w-12"
@@ -167,7 +168,7 @@ export default function About() {
                         {highlight.title}
                       </CardTitle>
                     </CardHeader>
-                    <CardContent className="pt-0">
+                    <CardContent className="flex-1 pb-4 pt-0">
                       <CardDescription className="text-law-text-light text-xs leading-relaxed sm:text-sm">
                         {highlight.description}
                       </CardDescription>

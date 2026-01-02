@@ -94,9 +94,9 @@ export default function FAQ() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 role="listitem"
               >
-                <Card className="focus-within:ring-law-primary border-0 bg-white shadow-md transition-all duration-300 focus-within:ring-2 focus-within:ring-offset-2 hover:shadow-lg">
+                <Card className="focus-within:ring-law-primary gap-0 border-0 bg-white shadow-md transition-all duration-300 focus-within:ring-2 focus-within:ring-offset-2 hover:shadow-lg">
                   <CardHeader
-                    className="cursor-pointer pb-3 sm:pb-4"
+                    className="cursor-pointer pb-2 sm:pb-3"
                     onClick={() => toggleFAQ(index)}
                     role="button"
                     tabIndex={0}

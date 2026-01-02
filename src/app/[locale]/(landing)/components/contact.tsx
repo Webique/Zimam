@@ -18,20 +18,25 @@ import { siteConfig } from "@/config/site";
 
 const contactMethods = [
   {
+    key: "whatsapp" as const,
+    icon: WhatsAppIcon,
+    href: siteConfig.links.whatsapp,
+    displayValue: siteConfig.support.phone,
+    iconComponent: Phone
+  },
+  {
     key: "snapchat" as const,
     icon: SnapchatIcon,
     href: siteConfig.links.snapchat,
-    color: "text-yellow-400",
-    bgColor: "bg-yellow-400/10",
-    hoverBg: "group-hover:bg-yellow-400"
+    displayValue: "zimam_905",
+    iconComponent: MessageCircle
   },
   {
     key: "twitter" as const,
     icon: TwitterIcon,
     href: siteConfig.links.twitter,
-    color: "text-blue-500",
-    bgColor: "bg-blue-500/10",
-    hoverBg: "group-hover:bg-blue-500"
+    displayValue: "Zimam0905",
+    iconComponent: MessageCircle
   }
 ];
 
@@ -81,51 +86,9 @@ export default function Contact() {
               role="list"
               aria-label={t("contactMethods")}
             >
-              {/* Phone/WhatsApp */}
-              <Card
-                className="focus-within:ring-law-primary group cursor-pointer border-0 bg-white shadow-md transition-all duration-300 focus-within:ring-2 focus-within:ring-offset-2 hover:-translate-y-1 hover:shadow-lg"
-                role="listitem"
-              >
-                <CardHeader className="pb-3 sm:pb-4">
-                  <div className="flex items-center gap-3 sm:gap-4">
-                    <div
-                      className="bg-whatsapp/10 group-hover:bg-whatsapp flex h-12 w-12 items-center justify-center rounded-xl transition-all duration-300 sm:h-14 sm:w-14"
-                      aria-hidden="true"
-                    >
-                      <Phone className="text-whatsapp h-6 w-6 transition-colors duration-300 group-hover:text-white sm:h-7 sm:w-7" />
-                    </div>
-                    <div className="flex-1">
-                      <CardTitle className="text-law-text text-lg font-bold sm:text-xl">
-                        {t("whatsapp")}
-                      </CardTitle>
-                      <CardDescription className="text-law-text-light text-sm sm:text-base">
-                        {siteConfig.support.phone}
-                      </CardDescription>
-                    </div>
-                  </div>
-                </CardHeader>
-                <CardContent className="pt-0">
-                  <a
-                    href={siteConfig.links.whatsapp}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-whatsapp hover:bg-whatsapp/90 focus:ring-whatsapp inline-flex h-11 w-full items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold text-white transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 sm:h-auto sm:w-auto sm:justify-start"
-                    aria-label={`${t("getInTouch")} ${t("whatsapp")}`}
-                  >
-                    <MessageCircle className="h-4 w-4" aria-hidden="true" />
-                    {t("getInTouch")}
-                  </a>
-                </CardContent>
-              </Card>
-
-              {/* Social Media Methods */}
+              {/* Contact Methods */}
               {contactMethods.map((method, index) => {
-                const IconComponent = method.icon;
-                // Extract handle from URL
-                const displayValue =
-                  method.key === "snapchat"
-                    ? siteConfig.links.snapchat.split("/").pop() || "zimam_905"
-                    : siteConfig.links.twitter.split("/").pop() || "Zimam0905";
+                const SocialIcon = method.icon;
 
                 return (
                   <m.div
@@ -133,46 +96,37 @@ export default function Contact() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
+                    transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
                     role="listitem"
                   >
-                    <Card className="focus-within:ring-law-primary group cursor-pointer border-0 bg-white shadow-md transition-all duration-300 focus-within:ring-2 focus-within:ring-offset-2 hover:-translate-y-1 hover:shadow-lg">
-                      <CardHeader className="pb-3 sm:pb-4">
-                        <div className="flex items-center gap-3 sm:gap-4">
-                          <div
-                            className={`${method.bgColor} ${method.hoverBg} flex h-12 w-12 items-center justify-center rounded-xl transition-all duration-300 sm:h-14 sm:w-14`}
-                            aria-hidden="true"
-                          >
-                            <IconComponent
-                              className={`${method.color} h-6 w-6 transition-colors duration-300 group-hover:text-white sm:h-7 sm:w-7`}
-                            />
+                    <a
+                      href={method.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block"
+                      aria-label={`${t("getInTouch")} ${t(method.key)}`}
+                    >
+                      <Card className="focus-within:ring-law-primary group cursor-pointer border-0 bg-white shadow-md transition-all duration-300 focus-within:ring-2 focus-within:ring-offset-2 hover:-translate-y-1 hover:shadow-lg">
+                        <CardHeader className="pb-3 sm:pb-4">
+                          <div className="flex items-center gap-3 sm:gap-4">
+                            <div
+                              className="bg-law-primary/10 group-hover:bg-law-primary flex h-12 w-12 items-center justify-center rounded-xl transition-all duration-300 sm:h-14 sm:w-14"
+                              aria-hidden="true"
+                            >
+                              <SocialIcon className="text-law-primary h-6 w-6 transition-colors duration-300 group-hover:text-white sm:h-7 sm:w-7" />
+                            </div>
+                            <div className="flex-1">
+                              <CardTitle className="text-law-text text-lg font-bold sm:text-xl">
+                                {t(method.key)}
+                              </CardTitle>
+                              <CardDescription className="text-law-text-light text-sm sm:text-base">
+                                {method.displayValue}
+                              </CardDescription>
+                            </div>
                           </div>
-                          <div className="flex-1">
-                            <CardTitle className="text-law-text text-lg font-bold sm:text-xl">
-                              {t(method.key)}
-                            </CardTitle>
-                            <CardDescription className="text-law-text-light text-sm sm:text-base">
-                              {displayValue}
-                            </CardDescription>
-                          </div>
-                        </div>
-                      </CardHeader>
-                      <CardContent className="pt-0">
-                        <a
-                          href={method.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className={`${method.color.replace("text-", "bg-")} inline-flex h-11 w-full items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold text-white transition-all duration-300 hover:scale-105 hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 sm:h-auto sm:w-auto sm:justify-start`}
-                          aria-label={`${t("getInTouch")} ${t(method.key)}`}
-                        >
-                          <IconComponent
-                            className="h-4 w-4"
-                            aria-hidden="true"
-                          />
-                          {t("getInTouch")}
-                        </a>
-                      </CardContent>
-                    </Card>
+                        </CardHeader>
+                      </Card>
+                    </a>
                   </m.div>
                 );
               })}

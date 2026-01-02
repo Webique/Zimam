@@ -28,14 +28,6 @@ export default function Hero() {
         }
   };
 
-  const scrollIndicatorVariant = {
-    animate: prefersReducedMotion
-      ? {}
-      : {
-          y: [0, 10, 0]
-        }
-  };
-
   return (
     <section
       className="from-law-background via-law-background to-law-accent bg-linear-to-br relative flex min-h-screen items-center justify-center overflow-hidden"
@@ -43,7 +35,11 @@ export default function Hero() {
     >
       {/* Background Pattern */}
       <div
-        className="pattern-dots absolute inset-0 z-0 opacity-30"
+        className="absolute inset-0 z-0 opacity-20"
+        style={{
+          backgroundImage: `radial-gradient(circle at 25% 25%, rgba(255, 107, 53, 0.1) 0%, transparent 50%),
+                           radial-gradient(circle at 75% 75%, rgba(255, 184, 0, 0.1) 0%, transparent 50%)`
+        }}
         aria-hidden="true"
       />
 
@@ -67,7 +63,7 @@ export default function Hero() {
           duration: prefersReducedMotion ? 0 : 6,
           repeat: prefersReducedMotion ? 0 : Infinity
         }}
-        className="bg-law-primary/10 absolute left-10 top-20 z-10 h-32 w-32 rounded-full blur-xl"
+        className="bg-primary/20 absolute left-10 top-20 z-10 h-32 w-32 rounded-full blur-2xl"
         aria-hidden="true"
       />
       <m.div
@@ -77,7 +73,7 @@ export default function Hero() {
           repeat: prefersReducedMotion ? 0 : Infinity,
           delay: prefersReducedMotion ? 0 : 2
         }}
-        className="bg-law-primary/5 absolute bottom-20 right-10 z-10 h-48 w-48 rounded-full blur-2xl"
+        className="bg-primary/10 absolute bottom-20 right-10 z-10 h-48 w-48 rounded-full blur-3xl"
         aria-hidden="true"
       />
       <m.div
@@ -87,12 +83,12 @@ export default function Hero() {
           repeat: prefersReducedMotion ? 0 : Infinity,
           delay: prefersReducedMotion ? 0 : 4
         }}
-        className="bg-law-secondary/5 absolute left-1/4 top-1/2 z-10 h-24 w-24 rounded-full blur-xl"
+        className="bg-primary/15 absolute left-1/4 top-1/2 z-10 h-24 w-24 rounded-full blur-2xl"
         aria-hidden="true"
       />
 
       {/* Main Content */}
-      <div className="container relative z-20 mx-auto px-4 text-center sm:px-6">
+      <div className="container relative z-20 mx-auto mt-10 px-4 text-center sm:mt-20 sm:px-6">
         <m.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -116,7 +112,6 @@ export default function Hero() {
               {t("title")}
             </span>
           </m.h1>
-
           {/* Subtitle */}
           <m.p
             initial={fadeInVariant.initial}
@@ -129,7 +124,6 @@ export default function Hero() {
           >
             {t("subtitle")}
           </m.p>
-
           {/* Tagline */}
           <m.p
             initial={fadeInVariant.initial}
@@ -142,7 +136,6 @@ export default function Hero() {
           >
             {t("tagline")}
           </m.p>
-
           {/* Description */}
           <m.p
             initial={fadeInVariant.initial}
@@ -155,7 +148,6 @@ export default function Hero() {
           >
             {t("description")}
           </m.p>
-
           {/* Call to Action Buttons */}
           <m.div
             initial={fadeInVariant.initial}
@@ -201,47 +193,15 @@ export default function Hero() {
               </a>
             </Button>
           </m.div>
-
-          {/* Scroll Indicator */}
-          <m.div
-            initial={fadeInVariant.initial}
-            animate={fadeInVariant.animate}
-            transition={{
-              duration: prefersReducedMotion ? 0.1 : 0.6,
-              delay: prefersReducedMotion ? 0 : 1.2
-            }}
-            className="flex flex-col items-center"
-            role="region"
-            aria-label="Scroll indicator"
-          >
-            <p className="text-law-text-light mb-4 text-sm">
-              {t("discoverServices")}
-            </p>
-            <m.div
-              animate={scrollIndicatorVariant.animate}
-              transition={{
-                duration: prefersReducedMotion ? 0 : 2,
-                repeat: prefersReducedMotion ? 0 : Infinity
-              }}
-              className="border-law-primary flex h-10 w-6 justify-center rounded-full border-2"
-              aria-hidden="true"
-            >
-              <m.div
-                animate={scrollIndicatorVariant.animate}
-                transition={{
-                  duration: prefersReducedMotion ? 0 : 2,
-                  repeat: prefersReducedMotion ? 0 : Infinity
-                }}
-                className="bg-law-primary mt-2 h-3 w-1 rounded-full"
-              />
-            </m.div>
-          </m.div>
         </m.div>
       </div>
 
       {/* Gradient Overlay */}
       <div
-        className="bg-linear-to-t from-law-background/20 pointer-events-none absolute inset-0 z-10 via-transparent to-transparent"
+        className="pointer-events-none absolute inset-0 z-10"
+        style={{
+          background: `linear-gradient(to top, rgba(248, 250, 252, 0.2) 0%, transparent 50%, transparent 100%)`
+        }}
         aria-hidden="true"
       />
     </section>
