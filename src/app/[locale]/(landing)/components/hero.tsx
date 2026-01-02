@@ -1,10 +1,13 @@
 "use client";
 
-import { MapPin, MessageCircle } from "lucide-react";
+import { MapPin } from "lucide-react";
 import * as m from "motion/react-m";
+import ExportedImage from "next-image-export-optimizer";
 import { useTranslations } from "next-intl";
 
+import WhatsAppIcon from "@/assets/icons/whatsapp.svg";
 import { Button } from "@/components/ui/button";
+import { siteConfig } from "@/config/site";
 import { useAccessibility } from "@/contexts/accessibility-context";
 
 export default function Hero() {
@@ -40,9 +43,22 @@ export default function Hero() {
     >
       {/* Background Pattern */}
       <div
-        className="pattern-dots absolute inset-0 opacity-30"
+        className="pattern-dots absolute inset-0 z-0 opacity-30"
         aria-hidden="true"
       />
+
+      {/* Hero Background Image */}
+      <div className="absolute inset-0 z-0 opacity-10">
+        <ExportedImage
+          src="/images/hero.jpeg"
+          alt="Professional law office environment"
+          fill
+          className="object-cover"
+          priority
+          placeholder="blur"
+          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+        />
+      </div>
 
       {/* Floating Background Elements */}
       <m.div
@@ -51,7 +67,7 @@ export default function Hero() {
           duration: prefersReducedMotion ? 0 : 6,
           repeat: prefersReducedMotion ? 0 : Infinity
         }}
-        className="bg-law-primary/10 absolute left-10 top-20 h-32 w-32 rounded-full blur-xl"
+        className="bg-law-primary/10 absolute left-10 top-20 z-10 h-32 w-32 rounded-full blur-xl"
         aria-hidden="true"
       />
       <m.div
@@ -61,7 +77,7 @@ export default function Hero() {
           repeat: prefersReducedMotion ? 0 : Infinity,
           delay: prefersReducedMotion ? 0 : 2
         }}
-        className="bg-law-primary/5 absolute bottom-20 right-10 h-48 w-48 rounded-full blur-2xl"
+        className="bg-law-primary/5 absolute bottom-20 right-10 z-10 h-48 w-48 rounded-full blur-2xl"
         aria-hidden="true"
       />
       <m.div
@@ -71,12 +87,12 @@ export default function Hero() {
           repeat: prefersReducedMotion ? 0 : Infinity,
           delay: prefersReducedMotion ? 0 : 4
         }}
-        className="bg-law-secondary/5 absolute left-1/4 top-1/2 h-24 w-24 rounded-full blur-xl"
+        className="bg-law-secondary/5 absolute left-1/4 top-1/2 z-10 h-24 w-24 rounded-full blur-xl"
         aria-hidden="true"
       />
 
       {/* Main Content */}
-      <div className="container relative z-10 mx-auto px-4 text-center sm:px-6">
+      <div className="container relative z-20 mx-auto px-4 text-center sm:px-6">
         <m.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -158,13 +174,13 @@ export default function Hero() {
               asChild
             >
               <a
-                href="https://wa.me/966560008905"
+                href={siteConfig.links.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-3"
                 aria-label="Contact us via WhatsApp"
               >
-                <MessageCircle className="h-5 w-5" aria-hidden="true" />
+                <WhatsAppIcon className="h-5 w-5" aria-hidden="true" />
                 {t("cta")}
               </a>
             </Button>
@@ -181,7 +197,7 @@ export default function Hero() {
                 aria-label="View location"
               >
                 <MapPin className="h-5 w-5" aria-hidden="true" />
-                الدمام - حي الحسام
+                {t("locationText")}
               </a>
             </Button>
           </m.div>
@@ -198,7 +214,9 @@ export default function Hero() {
             role="region"
             aria-label="Scroll indicator"
           >
-            <p className="text-law-text-light mb-4 text-sm">اكتشف خدماتنا</p>
+            <p className="text-law-text-light mb-4 text-sm">
+              {t("discoverServices")}
+            </p>
             <m.div
               animate={scrollIndicatorVariant.animate}
               transition={{
@@ -223,7 +241,7 @@ export default function Hero() {
 
       {/* Gradient Overlay */}
       <div
-        className="bg-linear-to-t from-law-background/20 pointer-events-none absolute inset-0 via-transparent to-transparent"
+        className="bg-linear-to-t from-law-background/20 pointer-events-none absolute inset-0 z-10 via-transparent to-transparent"
         aria-hidden="true"
       />
     </section>

@@ -14,12 +14,13 @@ import {
   CardHeader,
   CardTitle
 } from "@/components/ui/card";
+import { siteConfig } from "@/config/site";
 
 const contactMethods = [
   {
     key: "snapchat" as const,
     icon: SnapchatIcon,
-    href: "https://snapchat.com/add/zimam_905",
+    href: siteConfig.links.snapchat,
     color: "text-yellow-400",
     bgColor: "bg-yellow-400/10",
     hoverBg: "group-hover:bg-yellow-400"
@@ -27,7 +28,7 @@ const contactMethods = [
   {
     key: "twitter" as const,
     icon: TwitterIcon,
-    href: "https://twitter.com/Zimam0905",
+    href: siteConfig.links.twitter,
     color: "text-blue-500",
     bgColor: "bg-blue-500/10",
     hoverBg: "group-hover:bg-blue-500"
@@ -98,14 +99,14 @@ export default function Contact() {
                         {t("whatsapp")}
                       </CardTitle>
                       <CardDescription className="text-law-text-light text-sm sm:text-base">
-                        {t("phoneNumber")}
+                        {siteConfig.support.phone}
                       </CardDescription>
                     </div>
                   </div>
                 </CardHeader>
                 <CardContent className="pt-0">
                   <a
-                    href="https://wa.me/966560008905"
+                    href={siteConfig.links.whatsapp}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-whatsapp hover:bg-whatsapp/90 focus:ring-whatsapp inline-flex h-11 w-full items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold text-white transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 sm:h-auto sm:w-auto sm:justify-start"
@@ -120,10 +121,11 @@ export default function Contact() {
               {/* Social Media Methods */}
               {contactMethods.map((method, index) => {
                 const IconComponent = method.icon;
+                // Extract handle from URL
                 const displayValue =
                   method.key === "snapchat"
-                    ? t("snapchatHandle")
-                    : t("twitterHandle");
+                    ? siteConfig.links.snapchat.split("/").pop() || "zimam_905"
+                    : siteConfig.links.twitter.split("/").pop() || "Zimam0905";
 
                 return (
                   <m.div
@@ -211,13 +213,13 @@ export default function Contact() {
                 <div className="bg-law-primary/5 rounded-lg p-4 sm:p-6">
                   <div className="text-center">
                     <h4 className="text-law-text mb-2 text-base font-semibold sm:text-lg">
-                      مكتب زمام الرأي للمحاماة
+                      {t("firmName")}
                     </h4>
                     <p className="text-law-text-light mb-3 text-sm sm:mb-4 sm:text-base">
                       {t("locationText")}
                     </p>
                     <div className="text-law-primary text-xs font-medium sm:text-sm">
-                      المملكة العربية السعودية
+                      {t("country")}
                     </div>
                   </div>
                 </div>
@@ -234,23 +236,23 @@ export default function Contact() {
             >
               <div className="bg-law-primary/10 rounded-2xl p-6 text-center sm:p-8">
                 <h4 className="text-law-text mb-3 text-lg font-bold sm:mb-4 sm:text-xl">
-                  جاهزون لخدمتكم
+                  {t("readyToServe.title")}
                 </h4>
                 <p className="text-law-text-light mb-4 text-sm sm:mb-6 sm:text-base">
-                  تواصلوا معنا اليوم للحصول على استشارة قانونية متخصصة
+                  {t("readyToServe.description")}
                 </p>
                 <a
-                  href="https://wa.me/966560008905"
+                  href={siteConfig.links.whatsapp}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-law-primary hover:bg-law-primary-dark focus:ring-law-primary inline-flex h-12 w-full items-center justify-center gap-3 rounded-xl px-6 py-3 text-base font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-offset-2 sm:h-auto sm:w-auto sm:px-8 sm:py-4 sm:text-lg"
-                  aria-label="ابدأ المحادثة الآن عبر واتساب"
+                  aria-label={t("readyToServe.ariaLabel")}
                 >
                   <WhatsAppIcon
                     className="h-5 w-5 sm:h-6 sm:w-6"
                     aria-hidden="true"
                   />
-                  ابدأ المحادثة الآن
+                  {t("readyToServe.button")}
                 </a>
               </div>
             </m.div>

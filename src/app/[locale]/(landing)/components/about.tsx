@@ -2,6 +2,7 @@
 
 import { Award, CheckCircle, Shield, Users } from "lucide-react";
 import * as m from "motion/react-m";
+import ExportedImage from "next-image-export-optimizer";
 import { useTranslations } from "next-intl";
 
 import {
@@ -18,23 +19,23 @@ export default function About() {
   const highlights = [
     {
       icon: Shield,
-      title: "الوقاية القانونية",
-      description: "نركز على الحلول الاستباقية لحماية مصالحك"
+      title: t("highlights.legalPrevention.title"),
+      description: t("highlights.legalPrevention.description")
     },
     {
       icon: Award,
-      title: "خبرة متميزة",
-      description: "فريق من المحامين المتخصصين ذوي الخبرة العالية"
+      title: t("highlights.distinguishedExperience.title"),
+      description: t("highlights.distinguishedExperience.description")
     },
     {
       icon: Users,
-      title: "فهم عميق للسوق",
-      description: "معرفة شاملة بالقوانين المحلية والممارسات التجارية"
+      title: t("highlights.deepMarketUnderstanding.title"),
+      description: t("highlights.deepMarketUnderstanding.description")
     },
     {
       icon: CheckCircle,
-      title: "حلول عملية",
-      description: "نقدم استشارات قانونية فعالة وقابلة للتطبيق"
+      title: t("highlights.practicalSolutions.title"),
+      description: t("highlights.practicalSolutions.description")
     }
   ];
 
@@ -70,6 +71,28 @@ export default function About() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="space-y-12"
           >
+            {/* Professional Image */}
+            <div className="relative overflow-hidden rounded-2xl">
+              <ExportedImage
+                src="/images/about.jpeg"
+                alt="Professional law office environment"
+                width={1074}
+                height={320}
+                className="h-64 w-full object-cover sm:h-80"
+                placeholder="blur"
+                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+              />
+              <div className="bg-law-primary/90 absolute inset-0 flex items-center justify-center">
+                <div className="text-center text-white">
+                  <h3 className="mb-2 text-xl font-bold sm:text-2xl">
+                    {t("firmName")}
+                  </h3>
+                  <p className="text-sm opacity-90 sm:text-base">
+                    {t("firmTagline")}
+                  </p>
+                </div>
+              </div>
+            </div>
             {/* Mission */}
             <section aria-labelledby="mission-heading">
               <h3
@@ -167,12 +190,10 @@ export default function About() {
           <div className="bg-law-primary/5 rounded-2xl p-6 sm:p-8 md:p-12">
             <div className="mx-auto max-w-4xl text-center">
               <h3 className="text-law-text mb-4 text-xl font-bold sm:mb-6 sm:text-2xl md:text-3xl">
-                فلسفتنا في العمل القانوني
+                {t("philosophy.title")}
               </h3>
               <p className="text-law-text-light mb-6 text-sm leading-relaxed sm:mb-8 sm:text-base md:text-lg">
-                نؤمن بأن القانون ليس مجرد نصوص وقواعد، بل أداة لحماية الحقوق
-                وتحقيق العدالة. نسعى لبناء علاقات طويلة الأمد مع عملائنا قائمة
-                على الثقة والشفافية والنتائج المحققة.
+                {t("philosophy.description")}
               </p>
               <div
                 className="grid gap-6 sm:gap-8 md:grid-cols-3"
@@ -184,7 +205,7 @@ export default function About() {
                     15+
                   </div>
                   <p className="text-law-text-light text-xs sm:text-sm">
-                    سنوات من الخبرة
+                    {t("philosophy.stats.experience")}
                   </p>
                 </div>
                 <div className="text-center" role="listitem">
@@ -192,7 +213,7 @@ export default function About() {
                     500+
                   </div>
                   <p className="text-law-text-light text-xs sm:text-sm">
-                    عميل راضٍ
+                    {t("philosophy.stats.satisfiedClients")}
                   </p>
                 </div>
                 <div className="text-center" role="listitem">
@@ -200,7 +221,7 @@ export default function About() {
                     95%
                   </div>
                   <p className="text-law-text-light text-xs sm:text-sm">
-                    معدل نجاح القضايا
+                    {t("philosophy.stats.successRate")}
                   </p>
                 </div>
               </div>

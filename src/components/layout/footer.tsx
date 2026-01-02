@@ -19,6 +19,8 @@ export default function Footer() {
     { label: t("home"), href: "/" },
     { label: t("about"), href: "#about" },
     { label: t("services"), href: "#services" },
+    { label: t("testimonials"), href: "#testimonials" },
+    { label: t("faq"), href: "#faq" },
     { label: t("contact"), href: "#contact" }
   ];
 
@@ -46,16 +48,13 @@ export default function Footer() {
               <Logo size="lg" className="text-white" />
             </div>
 
-            <p className="mb-4 max-w-md text-xs leading-relaxed text-white/60 sm:mb-6 sm:text-sm">
+            <p className="mb-6 max-w-md text-xs leading-relaxed text-white/60 sm:mb-8 sm:text-sm">
               {t("companyDescription")}
             </p>
 
-            {/* Tagline Badge */}
-            <div className="border-primary/20 bg-primary/10 inline-flex items-center gap-2 rounded-xl border px-3 py-2 sm:gap-3 sm:px-4 sm:py-3">
-              <span className="text-lg sm:text-2xl">🥡</span>
-              <span className="text-accent text-xs font-medium sm:text-sm">
-                {t("tagline")}
-              </span>
+            {/* Professional Tagline */}
+            <div className="text-primary/80 text-xs font-medium italic sm:text-sm">
+              {t("tagline")}
             </div>
           </m.div>
 

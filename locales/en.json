@@ -5,7 +5,9 @@
       "subtitle": "Specialized Law Firm for Comprehensive Legal Services",
       "tagline": "Your Trusted Legal Partner in Dammam",
       "cta": "Contact Us Now",
-      "description": "We provide practical and effective legal solutions focused on legal prevention and good governance"
+      "description": "We provide practical and effective legal solutions focused on legal prevention and good governance",
+      "locationText": "Dammam - Al-Husam District",
+      "discoverServices": "Discover Our Services"
     },
     "about": {
       "title": "About Us",
@@ -14,7 +16,36 @@
       "approach": "Our Approach",
       "approachText": "We follow a comprehensive approach in providing legal services that focuses on understanding client needs and providing proactive advice",
       "whyChooseUs": "Why Choose Zimam Al-Rai?",
-      "whyChooseUsText": "Choosing the right legal partner is crucial for your business success. We offer distinguished legal expertise with deep understanding of the local market"
+      "whyChooseUsText": "Choosing the right legal partner is crucial for your business success. We offer distinguished legal expertise with deep understanding of the local market",
+      "highlights": {
+        "legalPrevention": {
+          "title": "Legal Prevention",
+          "description": "We focus on proactive solutions to protect your interests"
+        },
+        "distinguishedExperience": {
+          "title": "Distinguished Experience",
+          "description": "Team of specialized lawyers with high expertise"
+        },
+        "deepMarketUnderstanding": {
+          "title": "Deep Market Understanding",
+          "description": "Comprehensive knowledge of local laws and business practices"
+        },
+        "practicalSolutions": {
+          "title": "Practical Solutions",
+          "description": "We provide effective and applicable legal consultations"
+        }
+      },
+      "firmName": "Zimam Al-Rai Law Firm",
+      "firmTagline": "Distinguished legal expertise at your service",
+      "philosophy": {
+        "title": "Our Philosophy in Legal Work",
+        "description": "We believe that law is not just texts and rules, but a tool to protect rights and achieve justice. We strive to build long-term relationships with our clients based on trust, transparency, and achieved results.",
+        "stats": {
+          "experience": "Years of Experience",
+          "satisfiedClients": "Satisfied Clients",
+          "successRate": "Case Success Rate"
+        }
+      }
     },
     "services": {
       "title": "Our Legal Services",
@@ -73,10 +104,77 @@
       "snapchatHandle": "zimam_905",
       "twitterHandle": "Zimam0905",
       "getInTouch": "Get In Touch",
-      "contactMethods": "Contact Methods"
+      "contactMethods": "Contact Methods",
+      "firmName": "Zimam Al-Rai Law Firm",
+      "country": "Kingdom of Saudi Arabia",
+      "readyToServe": {
+        "title": "Ready to Serve You",
+        "description": "Contact us today for specialized legal consultation",
+        "button": "Start Conversation Now",
+        "ariaLabel": "Start conversation now via WhatsApp"
+      }
     },
     "WhatsAppFloat": {
       "tooltip": "Contact us via WhatsApp"
+    },
+    "testimonials": {
+      "title": "Client Testimonials",
+      "subtitle": "What our clients say about our distinguished legal services",
+      "testimonial1": {
+        "name": "Ahmed Mohammed Al-Ali",
+        "role": "Business Owner",
+        "text": "Outstanding legal service with a professional team. They helped me resolve a complex case with high efficiency."
+      },
+      "testimonial2": {
+        "name": "Fatima Ahmed Al-Salem",
+        "role": "Company Manager",
+        "text": "The best law firm I've dealt with. Accurate consultations and excellent follow-up."
+      },
+      "testimonial3": {
+        "name": "Khalid Abdullah Al-Nasr",
+        "role": "Investor",
+        "text": "Professional and specialized legal team. Their legal advice helped me greatly in my business."
+      },
+      "trustSection": {
+        "title": "Client Trust is Our Priority",
+        "clientSatisfaction": "Client Satisfaction",
+        "continuousSupport": "24/7 Support",
+        "successfulCases": "Successful Cases"
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Answers to the most common questions about our legal services",
+      "faq1": {
+        "question": "What legal services does the firm provide?",
+        "answer": "We provide a comprehensive range of legal services including official documentation, contract and agreement drafting, legal representation, and legal consultations in various fields."
+      },
+      "faq2": {
+        "question": "How long does the official documentation process take?",
+        "answer": "The documentation duration varies depending on the type and complexity of the document, but most simple documents can be completed on the same day, while complex documents may take 3-7 business days."
+      },
+      "faq3": {
+        "question": "Do you provide free legal consultations?",
+        "answer": "Yes, we provide a free initial consultation for 15 minutes to assess your case and explain how we can help you. You can book an appointment via WhatsApp or direct call."
+      },
+      "faq4": {
+        "question": "What are the legal fees and service charges?",
+        "answer": "Fees vary depending on the type of service and case complexity. We offer competitive and transparent pricing, and we clarify all costs upfront before starting any legal work."
+      },
+      "faq5": {
+        "question": "Can I contact you outside official working hours?",
+        "answer": "Yes, we provide 24/7 WhatsApp support for urgent cases. You can also leave a message and we will contact you as soon as possible."
+      },
+      "faq6": {
+        "question": "In which areas do you provide your services?",
+        "answer": "Our main office is in Dammam - Al-Husam district, and we provide our services throughout the Eastern Province and the Kingdom of Saudi Arabia. We also provide remote consultations when needed."
+      },
+      "contactCta": {
+        "title": "Didn't find an answer to your question?",
+        "description": "Contact us directly and we'll be happy to answer all your inquiries",
+        "button": "Contact Us Now",
+        "ariaLabel": "Contact us via WhatsApp"
+      }
     }
   },
   "Error": {
@@ -106,6 +204,8 @@
       "home": "Home",
       "about": "About Us",
       "services": "Services",
+      "testimonials": "Testimonials",
+      "faq": "FAQ",
       "contact": "Contact"
     },
     "cta": "Contact Us",
@@ -116,6 +216,8 @@
     "home": "Home",
     "about": "About Us",
     "services": "Services",
+    "testimonials": "Testimonials",
+    "faq": "FAQ",
     "contact": "Contact",
     "quickLinks": "Quick Links",
     "contactUs": "Contact Us",

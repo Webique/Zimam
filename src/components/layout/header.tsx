@@ -5,6 +5,7 @@ import * as m from "motion/react-m";
 import { useTranslations } from "next-intl";
 import * as React from "react";
 
+import WhatsAppIcon from "@/assets/icons/whatsapp.svg";
 import LocaleSwitcher from "@/components/locale-switcher";
 import { Button } from "@/components/ui/button";
 import Logo from "@/components/ui/logo";
@@ -32,6 +33,8 @@ export default function Header() {
     { label: t("nav.home"), href: "/" },
     { label: t("nav.about"), href: "#about" },
     { label: t("nav.services"), href: "#services" },
+    { label: t("nav.testimonials"), href: "#testimonials" },
+    { label: t("nav.faq"), href: "#faq" },
     { label: t("nav.contact"), href: "#contact" }
   ];
 
@@ -83,10 +86,7 @@ export default function Header() {
                 <Link
                   href={item.href}
                   className={cn(
-                    "group relative px-4 py-2 text-sm font-medium transition-all duration-300",
-                    isScrolled
-                      ? "text-law-secondary hover:text-law-primary"
-                      : "text-white/90 hover:text-white",
+                    "text-law-secondary hover:text-law-primary group relative px-4 py-2 text-sm font-medium transition-all duration-300",
                     "hover:bg-law-primary/10 focus:ring-law-primary rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2"
                   )}
                 >
@@ -103,7 +103,7 @@ export default function Header() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.5 }}
           >
-            <LocaleSwitcher isTop={isScrolled} />
+            <LocaleSwitcher />
 
             <Button
               size="lg"
@@ -116,7 +116,7 @@ export default function Header() {
                 rel="noopener noreferrer"
                 aria-label="Contact us via WhatsApp"
               >
-                <MessageCircle
+                <WhatsAppIcon
                   className="h-4 w-4 transition-transform group-hover:scale-110"
                   aria-hidden="true"
                 />
@@ -127,7 +127,7 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <div className="flex items-center gap-2 lg:hidden">
-            <LocaleSwitcher className="w-auto" isTop={isScrolled} />
+            <LocaleSwitcher className="w-auto" />
 
             <button
               className="text-law-secondary hover:bg-law-primary/10 focus:ring-law-primary rounded-lg p-2 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2"
