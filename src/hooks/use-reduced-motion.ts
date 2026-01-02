@@ -7,7 +7,13 @@ import { useEffect, useState } from "react";
  * Returns true if user prefers reduced motion
  */
 export function useReducedMotion(): boolean {
-  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(() => {
+    // Initialize with the current preference if available
+    if (typeof window !== "undefined") {
+      return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    }
+    return false;
+  });
 
   useEffect(() => {
     // Check if we're in the browser
@@ -15,9 +21,6 @@ export function useReducedMotion(): boolean {
 
     // Create media query for prefers-reduced-motion
     const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-
-    // Set initial value
-    setPrefersReducedMotion(mediaQuery.matches);
 
     // Create event listener for changes
     const handleChange = (event: MediaQueryListEvent) => {

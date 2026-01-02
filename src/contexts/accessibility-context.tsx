@@ -20,17 +20,42 @@ export function AccessibilityProvider({
 }: {
   children: React.ReactNode;
 }) {
-  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(() => {
+    if (typeof window !== "undefined") {
+      return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    }
+    return false;
+  });
+
   const [isKeyboardUser, setIsKeyboardUser] = useState(false);
-  const [highContrast, setHighContrast] = useState(false);
+
+  const [highContrast, setHighContrast] = useState(() => {
+    if (typeof window !== "undefined") {
+      const savedHighContrast =
+        localStorage.getItem("accessibility-high-contrast") === "true";
+      const systemHighContrast = window.matchMedia(
+        "(prefers-contrast: high)"
+      ).matches;
+      return savedHighContrast || systemHighContrast;
+    }
+    return false;
+  });
+
   const [fontSize, setFontSize] = useState<"normal" | "large" | "extra-large">(
-    "normal"
+    () => {
+      if (typeof window !== "undefined") {
+        const savedFontSize = localStorage.getItem(
+          "accessibility-font-size"
+        ) as "normal" | "large" | "extra-large";
+        return savedFontSize || "normal";
+      }
+      return "normal";
+    }
   );
 
   useEffect(() => {
-    // Check for reduced motion preference
+    // Check for reduced motion preference changes
     const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-    setPrefersReducedMotion(mediaQuery.matches);
 
     const handleMotionChange = (event: MediaQueryListEvent) => {
       setPrefersReducedMotion(event.matches);
@@ -38,12 +63,15 @@ export function AccessibilityProvider({
 
     mediaQuery.addEventListener("change", handleMotionChange);
 
-    // Check for high contrast preference
+    // Check for high contrast preference changes
     const contrastQuery = window.matchMedia("(prefers-contrast: high)");
-    setHighContrast(contrastQuery.matches);
 
     const handleContrastChange = (event: MediaQueryListEvent) => {
-      setHighContrast(event.matches);
+      setHighContrast(() => {
+        const savedHighContrast =
+          localStorage.getItem("accessibility-high-contrast") === "true";
+        return savedHighContrast || event.matches;
+      });
     };
 
     contrastQuery.addEventListener("change", handleContrastChange);
@@ -61,19 +89,6 @@ export function AccessibilityProvider({
 
     document.addEventListener("keydown", handleKeyDown);
     document.addEventListener("mousedown", handleMouseDown);
-
-    // Load saved preferences
-    const savedFontSize = localStorage.getItem("accessibility-font-size") as
-      | "normal"
-      | "large"
-      | "extra-large";
-    if (savedFontSize) {
-      setFontSize(savedFontSize);
-    }
-
-    const savedHighContrast =
-      localStorage.getItem("accessibility-high-contrast") === "true";
-    setHighContrast((prev) => savedHighContrast || prev);
 
     return () => {
       mediaQuery.removeEventListener("change", handleMotionChange);
