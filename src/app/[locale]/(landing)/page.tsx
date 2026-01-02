@@ -4,8 +4,6 @@ import type { Locale } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { use } from "react";
 
-import SectionWrapper from "@/components/section-wrapper";
-
 import About from "./components/about";
 import Contact from "./components/contact";
 import Hero from "./components/hero";
@@ -17,32 +15,26 @@ export default function IndexPage({ params }: PageProps) {
 
   return (
     <main id="main-content" role="main">
-      {/* Hero Section - No wrapper needed as it's above the fold */}
+      {/* Hero Section */}
       <Hero />
 
-      {/* About Section with performance optimization */}
-      <SectionWrapper delay={0.1}>
-        <div className="relative">
-          <div className="bg-linear-to-r via-law-primary/20 absolute inset-x-0 top-0 h-px from-transparent to-transparent" />
-          <About />
-        </div>
-      </SectionWrapper>
+      {/* About Section */}
+      <div className="relative">
+        <div className="bg-linear-to-r via-law-primary/20 absolute inset-x-0 top-0 h-px from-transparent to-transparent" />
+        <About />
+      </div>
 
-      {/* Services Section with performance optimization */}
-      <SectionWrapper delay={0.2}>
-        <div className="relative">
-          <div className="bg-linear-to-r via-law-primary/20 absolute inset-x-0 top-0 h-px from-transparent to-transparent" />
-          <Services />
-        </div>
-      </SectionWrapper>
+      {/* Services Section */}
+      <div className="relative">
+        <div className="bg-linear-to-r via-law-primary/20 absolute inset-x-0 top-0 h-px from-transparent to-transparent" />
+        <Services />
+      </div>
 
-      {/* Contact Section with performance optimization */}
-      <SectionWrapper delay={0.3}>
-        <div className="relative">
-          <div className="bg-linear-to-r via-law-primary/20 absolute inset-x-0 top-0 h-px from-transparent to-transparent" />
-          <Contact />
-        </div>
-      </SectionWrapper>
+      {/* Contact Section */}
+      <div className="relative">
+        <div className="bg-linear-to-r via-law-primary/20 absolute inset-x-0 top-0 h-px from-transparent to-transparent" />
+        <Contact />
+      </div>
     </main>
   );
 }

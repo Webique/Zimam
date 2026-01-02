@@ -1,7 +1,7 @@
 "use client";
 
 import ExportedImage from "next-image-export-optimizer";
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 
 import { Link as I18nLink } from "@/i18n/navigation.public";
 import { cn } from "@/lib/utils";
@@ -30,8 +30,6 @@ export default function Logo({
   size = "md"
 }: LogoProps) {
   const t = useTranslations("Header");
-  const locale = useLocale();
-  const isRTL = locale === "ar";
 
   // Size configurations for responsive design
   const sizeConfig = {
@@ -64,9 +62,8 @@ export default function Logo({
       href={href}
       aria-label={t("siteName")}
       className={cn(
-        "flex items-center transition-all duration-300 hover:opacity-80",
+        "inline-flex items-center transition-all duration-300 hover:opacity-80",
         config.gap,
-        isRTL ? "flex-row-reverse" : "flex-row",
         className
       )}
     >
@@ -85,12 +82,7 @@ export default function Logo({
       />
 
       {showText && (
-        <div
-          className={cn(
-            "flex flex-col leading-tight",
-            isRTL ? "text-right" : "text-left"
-          )}
-        >
+        <div className="flex flex-col text-start leading-tight">
           <span
             className={cn(
               "text-law-primary transition-colors duration-300",
@@ -100,12 +92,7 @@ export default function Logo({
           >
             {t("siteName")}
           </span>
-          <span
-            className={cn(
-              "text-law-text-light text-xs font-medium sm:text-sm",
-              isRTL ? "text-right" : "text-left"
-            )}
-          >
+          <span className="text-law-text-light text-start text-xs font-medium sm:text-sm">
             {t("siteDescription")}
           </span>
         </div>
