@@ -30,7 +30,7 @@ export default function Hero() {
 
   return (
     <section
-      className="from-law-background via-law-background to-law-accent bg-linear-to-br relative flex min-h-screen items-center justify-center overflow-hidden"
+      className="from-law-background via-law-background to-law-accent bg-linear-to-br relative flex min-h-[700px] items-center justify-center overflow-hidden sm:min-h-[600px] lg:min-h-screen"
       aria-label={t("title")}
     >
       {/* Background Pattern */}
