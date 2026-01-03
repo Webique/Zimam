@@ -43,16 +43,16 @@ export default function Hero() {
         aria-hidden="true"
       />
 
-      {/* Hero Background Image */}
-      <div className="absolute inset-0 z-0 opacity-10">
+      {/* Hero Background Logo */}
+      <div className="absolute inset-0 z-0 flex items-center justify-center opacity-10">
         <ExportedImage
-          src="/images/hero.jpeg"
-          alt="Professional law office environment"
-          fill
-          className="object-cover"
+          src="/images/logo.png"
+          alt="Zimam Al-Rai Logo"
+          width={745}
+          height={504}
+          className="h-auto w-full max-w-4xl object-contain"
           priority
-          placeholder="blur"
-          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+          placeholder="empty"
         />
       </div>
 
@@ -125,17 +125,19 @@ export default function Hero() {
             {t("subtitle")}
           </m.p>
           {/* Tagline */}
-          <m.p
-            initial={fadeInVariant.initial}
-            animate={fadeInVariant.animate}
-            transition={{
-              duration: prefersReducedMotion ? 0.1 : 0.6,
-              delay: prefersReducedMotion ? 0 : 0.6
-            }}
-            className="text-law-primary mb-6 text-base font-semibold sm:mb-8 sm:text-lg md:text-xl"
-          >
-            {t("tagline")}
-          </m.p>
+          {t("tagline") && (
+            <m.p
+              initial={fadeInVariant.initial}
+              animate={fadeInVariant.animate}
+              transition={{
+                duration: prefersReducedMotion ? 0.1 : 0.6,
+                delay: prefersReducedMotion ? 0 : 0.6
+              }}
+              className="text-law-primary mb-6 text-base font-semibold sm:mb-8 sm:text-lg md:text-xl"
+            >
+              {t("tagline")}
+            </m.p>
+          )}
           {/* Description */}
           <m.p
             initial={fadeInVariant.initial}

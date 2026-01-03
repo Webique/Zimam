@@ -9,7 +9,6 @@ import Contact from "./components/contact";
 import FAQ from "./components/faq";
 import Hero from "./components/hero";
 import Services from "./components/services";
-import Testimonials from "./components/testimonials";
 
 export default function IndexPage({ params }: PageProps) {
   const { locale } = use(params);
@@ -30,12 +29,6 @@ export default function IndexPage({ params }: PageProps) {
       <div className="relative">
         <div className="bg-linear-to-r via-law-primary/20 absolute inset-x-0 top-0 h-px from-transparent to-transparent" />
         <Services />
-      </div>
-
-      {/* Testimonials Section */}
-      <div className="relative">
-        <div className="bg-linear-to-r via-law-primary/20 absolute inset-x-0 top-0 h-px from-transparent to-transparent" />
-        <Testimonials />
       </div>
 
       {/* FAQ Section */}

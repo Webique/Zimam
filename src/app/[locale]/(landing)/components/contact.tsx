@@ -64,9 +64,11 @@ export default function Contact() {
           >
             {t("title")}
           </h2>
-          <p className="text-law-text-light mx-auto max-w-2xl text-base sm:text-lg md:text-xl">
-            {t("subtitle")}
-          </p>
+          {t("subtitle") && (
+            <p className="text-law-text-light mx-auto max-w-2xl text-base sm:text-lg md:text-xl">
+              {t("subtitle")}
+            </p>
+          )}
         </m.div>
 
         <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 xl:gap-16">
@@ -189,12 +191,16 @@ export default function Contact() {
               className="mt-6 sm:mt-8"
             >
               <div className="bg-law-primary/10 rounded-2xl p-6 text-center sm:p-8">
-                <h4 className="text-law-text mb-3 text-lg font-bold sm:mb-4 sm:text-xl">
-                  {t("readyToServe.title")}
-                </h4>
-                <p className="text-law-text-light mb-4 text-sm sm:mb-6 sm:text-base">
-                  {t("readyToServe.description")}
-                </p>
+                {t("readyToServe.title") && (
+                  <h4 className="text-law-text mb-3 text-lg font-bold sm:mb-4 sm:text-xl">
+                    {t("readyToServe.title")}
+                  </h4>
+                )}
+                {t("readyToServe.description") && (
+                  <p className="text-law-text-light mb-4 text-sm sm:mb-6 sm:text-base">
+                    {t("readyToServe.description")}
+                  </p>
+                )}
                 <a
                   href={siteConfig.links.whatsapp}
                   target="_blank"

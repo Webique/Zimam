@@ -87,9 +87,11 @@ export default function About() {
                   <h3 className="mb-2 text-xl font-bold sm:text-2xl">
                     {t("firmName")}
                   </h3>
-                  <p className="text-sm opacity-90 sm:text-base">
-                    {t("firmTagline")}
-                  </p>
+                  {t("firmTagline") && (
+                    <p className="text-sm opacity-90 sm:text-base">
+                      {t("firmTagline")}
+                    </p>
+                  )}
                 </div>
               </div>
             </div>
@@ -120,17 +122,21 @@ export default function About() {
             </section>
 
             {/* Why Choose Us */}
-            <section aria-labelledby="why-choose-heading">
-              <h3
-                id="why-choose-heading"
-                className="text-law-primary mb-4 text-xl font-bold sm:mb-6 sm:text-2xl md:text-3xl"
-              >
-                {t("whyChooseUs")}
-              </h3>
-              <p className="text-law-text-light text-base leading-relaxed sm:text-lg">
-                {t("whyChooseUsText")}
-              </p>
-            </section>
+            {t("whyChooseUs") && (
+              <section aria-labelledby="why-choose-heading">
+                <h3
+                  id="why-choose-heading"
+                  className="text-law-primary mb-4 text-xl font-bold sm:mb-6 sm:text-2xl md:text-3xl"
+                >
+                  {t("whyChooseUs")}
+                </h3>
+                {t("whyChooseUsText") && (
+                  <p className="text-law-text-light text-base leading-relaxed sm:text-lg">
+                    {t("whyChooseUsText")}
+                  </p>
+                )}
+              </section>
+            )}
           </m.div>
 
           {/* Right Column - Highlights Grid */}
@@ -193,9 +199,11 @@ export default function About() {
               <h3 className="text-law-text mb-4 text-xl font-bold sm:mb-6 sm:text-2xl md:text-3xl">
                 {t("philosophy.title")}
               </h3>
-              <p className="text-law-text-light mb-6 text-sm leading-relaxed sm:mb-8 sm:text-base md:text-lg">
-                {t("philosophy.description")}
-              </p>
+              {t("philosophy.description") && (
+                <p className="text-law-text-light mb-6 text-sm leading-relaxed sm:mb-8 sm:text-base md:text-lg">
+                  {t("philosophy.description")}
+                </p>
+              )}
               <div
                 className="grid gap-6 sm:gap-8 md:grid-cols-3"
                 role="list"

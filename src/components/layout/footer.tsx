@@ -19,7 +19,6 @@ export default function Footer() {
     { label: t("home"), href: "/" },
     { label: t("about"), href: "#about" },
     { label: t("services"), href: "#services" },
-    { label: t("testimonials"), href: "#testimonials" },
     { label: t("faq"), href: "#faq" },
     { label: t("contact"), href: "#contact" }
   ];
@@ -53,9 +52,11 @@ export default function Footer() {
             </p>
 
             {/* Professional Tagline */}
-            <div className="text-primary/80 text-xs font-medium italic sm:text-sm">
-              {t("tagline")}
-            </div>
+            {t("tagline") && (
+              <div className="text-primary/80 text-xs font-medium italic sm:text-sm">
+                {t("tagline")}
+              </div>
+            )}
           </m.div>
 
           {/* Quick Links */}

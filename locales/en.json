@@ -3,9 +3,9 @@
     "hero": {
       "title": "Zimam Al-Rai",
       "subtitle": "Specialized Law Firm for Comprehensive Legal Services",
-      "tagline": "Your Trusted Legal Partner in Dammam",
+      "tagline": "",
       "cta": "Contact Us Now",
-      "description": "We provide practical and effective legal solutions focused on legal prevention and good governance",
+      "description": "Legal services focused on legal prevention and good governance",
       "locationText": "Dammam - Al-Husam District",
       "discoverServices": "Discover Our Services"
     },
@@ -15,16 +15,16 @@
       "missionText": "At Zimam Al-Rai, we believe that legal prevention is better than cure, and we strive to provide practical and effective legal solutions that protect our clients' interests and achieve their goals",
       "approach": "Our Approach",
       "approachText": "We follow a comprehensive approach in providing legal services that focuses on understanding client needs and providing proactive advice",
-      "whyChooseUs": "Why Choose Zimam Al-Rai?",
-      "whyChooseUsText": "Choosing the right legal partner is crucial for your business success. We offer distinguished legal expertise with deep understanding of the local market",
+      "whyChooseUs": "",
+      "whyChooseUsText": "",
       "highlights": {
         "legalPrevention": {
           "title": "Legal Prevention",
           "description": "We focus on proactive solutions to protect your interests"
         },
         "distinguishedExperience": {
-          "title": "Distinguished Experience",
-          "description": "Team of specialized lawyers with high expertise"
+          "title": "Experience",
+          "description": "Team of specialized lawyers"
         },
         "deepMarketUnderstanding": {
           "title": "Deep Market Understanding",
@@ -35,11 +35,11 @@
           "description": "We provide effective and applicable legal consultations"
         }
       },
-      "firmName": "Zimam Al-Rai Law Firm",
-      "firmTagline": "Distinguished legal expertise at your service",
+      "firmName": "Zimam Al-Rai Company",
+      "firmTagline": "",
       "philosophy": {
         "title": "Our Philosophy in Legal Work",
-        "description": "We believe that law is not just texts and rules, but a tool to protect rights and achieve justice. We strive to build long-term relationships with our clients based on trust, transparency, and achieved results.",
+        "description": "",
         "stats": {
           "experience": "Years of Experience",
           "satisfiedClients": "Satisfied Clients",
@@ -62,7 +62,7 @@
       },
       "contracts": {
         "title": "Contracts and Agreements",
-        "description": "Drafting and reviewing commercial and civil contracts with the highest quality standards",
+        "description": "Drafting and reviewing commercial and civil contracts",
         "features": [
           "Commercial contract drafting",
           "Legal agreement review",
@@ -72,7 +72,7 @@
       },
       "representation": {
         "title": "Legal Representation",
-        "description": "Professional legal representation before courts and judicial authorities",
+        "description": "Legal representation before courts and judicial authorities",
         "features": [
           "Court representation",
           "Legal pleading preparation",
@@ -82,7 +82,7 @@
       },
       "consultation": {
         "title": "Legal Consultations",
-        "description": "Specialized legal consultations to protect your interests and achieve your goals",
+        "description": "Specialized legal consultations",
         "features": [
           "Commercial consultations",
           "Preventive legal advice",
@@ -93,7 +93,7 @@
     },
     "contact": {
       "title": "Contact Us",
-      "subtitle": "We are here to serve you and assist you with all your legal needs",
+      "subtitle": "",
       "phone": "Phone",
       "whatsapp": "WhatsApp",
       "snapchat": "Snapchat",
@@ -105,42 +105,17 @@
       "twitterHandle": "Zimam0905",
       "getInTouch": "Get In Touch",
       "contactMethods": "Contact Methods",
-      "firmName": "Zimam Al-Rai Law Firm",
+      "firmName": "Zimam Al-Rai Company",
       "country": "Kingdom of Saudi Arabia",
       "readyToServe": {
-        "title": "Ready to Serve You",
-        "description": "Contact us today for specialized legal consultation",
+        "title": "",
+        "description": "",
         "button": "Start Conversation Now",
         "ariaLabel": "Start conversation now via WhatsApp"
       }
     },
     "WhatsAppFloat": {
       "tooltip": "Contact us via WhatsApp"
-    },
-    "testimonials": {
-      "title": "Client Testimonials",
-      "subtitle": "What our clients say about our distinguished legal services",
-      "testimonial1": {
-        "name": "Ahmed Mohammed Al-Ali",
-        "role": "Business Owner",
-        "text": "Outstanding legal service with a professional team. They helped me resolve a complex case with high efficiency."
-      },
-      "testimonial2": {
-        "name": "Fatima Ahmed Al-Salem",
-        "role": "Company Manager",
-        "text": "The best law firm I've dealt with. Accurate consultations and excellent follow-up."
-      },
-      "testimonial3": {
-        "name": "Khalid Abdullah Al-Nasr",
-        "role": "Investor",
-        "text": "Professional and specialized legal team. Their legal advice helped me greatly in my business."
-      },
-      "trustSection": {
-        "title": "Client Trust is Our Priority",
-        "clientSatisfaction": "Client Satisfaction",
-        "continuousSupport": "24/7 Support",
-        "successfulCases": "Successful Cases"
-      }
     },
     "faq": {
       "title": "Frequently Asked Questions",
@@ -159,7 +134,7 @@
       },
       "faq4": {
         "question": "What are the legal fees and service charges?",
-        "answer": "Fees vary depending on the type of service and case complexity. We offer competitive and transparent pricing, and we clarify all costs upfront before starting any legal work."
+        "answer": "Fees vary depending on the type of service and case complexity. We clarify all costs upfront before starting any legal work."
       },
       "faq5": {
         "question": "Can I contact you outside official working hours?",
@@ -171,7 +146,7 @@
       },
       "contactCta": {
         "title": "Didn't find an answer to your question?",
-        "description": "Contact us directly and we'll be happy to answer all your inquiries",
+        "description": "Contact us directly to answer your inquiries",
         "button": "Contact Us Now",
         "ariaLabel": "Contact us via WhatsApp"
       }
@@ -204,7 +179,6 @@
       "home": "Home",
       "about": "About Us",
       "services": "Services",
-      "testimonials": "Testimonials",
       "faq": "FAQ",
       "contact": "Contact"
     },
@@ -216,7 +190,6 @@
     "home": "Home",
     "about": "About Us",
     "services": "Services",
-    "testimonials": "Testimonials",
     "faq": "FAQ",
     "contact": "Contact",
     "quickLinks": "Quick Links",
@@ -228,9 +201,9 @@
     "brandName": "Zimam Al-Rai",
     "copyright": "© {year} Zimam Al-Rai. All rights reserved",
     "allRightsReserved": "All rights reserved",
-    "companyDescription": "Specialized law firm providing comprehensive legal services focused on legal prevention and good governance to protect our clients' interests and achieve their goals.",
+    "companyDescription": "Specialized law firm providing comprehensive legal services focused on legal prevention and good governance.",
     "followUs": "Follow Us",
-    "tagline": "Your Trusted Legal Partner"
+    "tagline": ""
   },
   "Accessibility": {
     "skipToMain": "Skip to main content",
