@@ -50,7 +50,7 @@ export default function Hero() {
           alt="Zimam Al-Rai Logo"
           width={745}
           height={504}
-          className="h-auto w-full max-w-4xl object-contain"
+          className="h-auto w-full max-w-xl sm:max-w-2xl object-contain"
           priority
           placeholder="empty"
         />
