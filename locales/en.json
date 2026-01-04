@@ -2,7 +2,7 @@
   "IndexPage": {
     "hero": {
       "title": "Zimam Al-Rai",
-      "subtitle": "Specialized Law Firm for Comprehensive Legal Services",
+      "subtitle": "Zimam Al-Rai Company for Comprehensive Legal Services",
       "tagline": "",
       "cta": "Contact Us Now",
       "description": "Legal services focused on legal prevention and good governance",
@@ -27,8 +27,8 @@
           "description": "Team of specialized lawyers"
         },
         "deepMarketUnderstanding": {
-          "title": "Deep Market Understanding",
-          "description": "Comprehensive knowledge of local laws and business practices"
+          "title": "Local Laws",
+          "description": "Working according to local laws and business practices"
         },
         "practicalSolutions": {
           "title": "Practical Solutions",
@@ -130,7 +130,7 @@
       },
       "faq3": {
         "question": "Do you provide free legal consultations?",
-        "answer": "Yes, we provide a free initial consultation for 15 minutes to assess your case and explain how we can help you. You can book an appointment via WhatsApp or direct call."
+        "answer": "No, nothing is for free."
       },
       "faq4": {
         "question": "What are the legal fees and service charges?",
@@ -142,7 +142,7 @@
       },
       "faq6": {
         "question": "In which areas do you provide your services?",
-        "answer": "Our main office is in Dammam - Al-Husam district, and we provide our services throughout the Eastern Province and the Kingdom of Saudi Arabia. We also provide remote consultations when needed."
+        "answer": "Our main office is in Dammam - Al-Husam district, and we provide our services throughout the Kingdom. We also provide remote consultations when needed."
       },
       "contactCta": {
         "title": "Didn't find an answer to your question?",
@@ -165,9 +165,9 @@
     "backToHome": "Back to home"
   },
   "LocaleLayout": {
-    "name": "Zimam Al-Rai | Specialized Law Firm",
+    "name": "Zimam Al-Rai | Zimam Al-Rai Company",
     "short_name": "Zimam Al-Rai",
-    "description": "Zimam Al-Rai - Specialized law firm for comprehensive legal services, official documentation, contracts and agreements, legal representation and legal consultations in Dammam",
+    "description": "Zimam Al-Rai - Zimam Al-Rai Company for comprehensive legal services, official documentation, contracts and agreements, legal representation and legal consultations in Dammam",
     "keywords": ["Zimam Al-Rai", "law firm", "legal services", "documentation", "contracts", "legal representation", "legal consultations", "Dammam", "Saudi Arabia"]
   },
   "LocaleSwitcher": {
@@ -184,7 +184,7 @@
     },
     "cta": "Contact Us",
     "siteName": "Zimam Al-Rai",
-    "siteDescription": "Law Firm"
+    "siteDescription": "Zimam Al-Rai Company"
   },
   "Footer": {
     "home": "Home",
@@ -201,7 +201,7 @@
     "brandName": "Zimam Al-Rai",
     "copyright": "© {year} Zimam Al-Rai. All rights reserved",
     "allRightsReserved": "All rights reserved",
-    "companyDescription": "Specialized law firm providing comprehensive legal services focused on legal prevention and good governance.",
+    "companyDescription": "Zimam Al-Rai Company providing comprehensive legal services focused on legal prevention and good governance.",
     "followUs": "Follow Us",
     "tagline": ""
   },

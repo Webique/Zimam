@@ -204,36 +204,6 @@ export default function About() {
                   {t("philosophy.description")}
                 </p>
               )}
-              <div
-                className="grid gap-6 sm:gap-8 md:grid-cols-3"
-                role="list"
-                aria-label="Company statistics"
-              >
-                <div className="text-center" role="listitem">
-                  <div className="text-law-primary mb-1 text-2xl font-bold sm:mb-2 sm:text-3xl">
-                    15+
-                  </div>
-                  <p className="text-law-text-light text-xs sm:text-sm">
-                    {t("philosophy.stats.experience")}
-                  </p>
-                </div>
-                <div className="text-center" role="listitem">
-                  <div className="text-law-primary mb-1 text-2xl font-bold sm:mb-2 sm:text-3xl">
-                    500+
-                  </div>
-                  <p className="text-law-text-light text-xs sm:text-sm">
-                    {t("philosophy.stats.satisfiedClients")}
-                  </p>
-                </div>
-                <div className="text-center" role="listitem">
-                  <div className="text-law-primary mb-1 text-2xl font-bold sm:mb-2 sm:text-3xl">
-                    95%
-                  </div>
-                  <p className="text-law-text-light text-xs sm:text-sm">
-                    {t("philosophy.stats.successRate")}
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
         </m.div>
