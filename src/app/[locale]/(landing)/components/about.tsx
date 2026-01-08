@@ -2,7 +2,6 @@
 
 import { Award, CheckCircle, Shield, Users } from "lucide-react";
 import * as m from "motion/react-m";
-import ExportedImage from "next-image-export-optimizer";
 import { useTranslations } from "next-intl";
 
 import {
@@ -71,30 +70,6 @@ export default function About() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="space-y-12"
           >
-            {/* Professional Image */}
-            <div className="relative overflow-hidden rounded-2xl">
-              <ExportedImage
-                src="/images/about.jpeg"
-                alt="Professional law office environment"
-                width={1074}
-                height={320}
-                className="h-64 w-full object-cover sm:h-80"
-                placeholder="blur"
-                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
-              />
-              <div className="bg-law-primary/90 absolute inset-0 flex items-center justify-center">
-                <div className="text-center text-white">
-                  <h3 className="mb-2 text-xl font-bold sm:text-2xl">
-                    {t("firmName")}
-                  </h3>
-                  {t("firmTagline") && (
-                    <p className="text-sm opacity-90 sm:text-base">
-                      {t("firmTagline")}
-                    </p>
-                  )}
-                </div>
-              </div>
-            </div>
             {/* Mission */}
             <section aria-labelledby="mission-heading">
               <h3
