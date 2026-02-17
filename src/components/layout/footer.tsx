@@ -4,7 +4,9 @@ import { MapPin, Phone } from "lucide-react";
 import * as m from "motion/react-m";
 import { useTranslations } from "next-intl";
 
+import InstagramIcon from "@/assets/icons/instagram.svg";
 import SnapchatIcon from "@/assets/icons/snapchat.svg";
+import TikTokIcon from "@/assets/icons/tiktok.svg";
 import WhatsAppIcon from "@/assets/icons/whatsapp-2.svg";
 import TwitterIcon from "@/assets/icons/x.svg";
 import Logo from "@/components/ui/logo";
@@ -155,6 +157,18 @@ export default function Footer() {
                   {t("followUs")}
                 </h4>
                 <div className="flex items-center gap-2 sm:gap-3">
+                  {/* Instagram */}
+                  <m.a
+                    href={siteConfig.links.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-primary/10 hover:bg-primary/20 flex h-8 w-8 items-center justify-center rounded-xl transition-colors sm:h-10 sm:w-10"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <InstagramIcon className="text-primary h-4 w-4 sm:h-5 sm:w-5" />
+                  </m.a>
+
                   {/* Snapchat */}
                   <m.a
                     href={siteConfig.links.snapchat}
@@ -177,6 +191,18 @@ export default function Footer() {
                     whileTap={{ scale: 0.95 }}
                   >
                     <TwitterIcon className="text-primary h-4 w-4 sm:h-5 sm:w-5" />
+                  </m.a>
+
+                  {/* TikTok */}
+                  <m.a
+                    href={siteConfig.links.tiktok}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-primary/10 hover:bg-primary/20 flex h-8 w-8 items-center justify-center rounded-xl transition-colors sm:h-10 sm:w-10"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <TikTokIcon className="text-primary h-4 w-4 sm:h-5 sm:w-5" />
                   </m.a>
 
                   {/* WhatsApp (as social link) */}

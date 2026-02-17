@@ -4,7 +4,9 @@ import { MapPin, MessageCircle, Phone } from "lucide-react";
 import * as m from "motion/react-m";
 import { useTranslations } from "next-intl";
 
+import InstagramIcon from "@/assets/icons/instagram.svg";
 import SnapchatIcon from "@/assets/icons/snapchat.svg";
+import TikTokIcon from "@/assets/icons/tiktok.svg";
 import WhatsAppIcon from "@/assets/icons/whatsapp.svg";
 import TwitterIcon from "@/assets/icons/x.svg";
 import {
@@ -25,6 +27,13 @@ const contactMethods = [
     iconComponent: Phone
   },
   {
+    key: "instagram" as const,
+    icon: InstagramIcon,
+    href: siteConfig.links.instagram,
+    displayValue: "@zimam_legal",
+    iconComponent: MessageCircle
+  },
+  {
     key: "snapchat" as const,
     icon: SnapchatIcon,
     href: siteConfig.links.snapchat,
@@ -35,7 +44,14 @@ const contactMethods = [
     key: "twitter" as const,
     icon: TwitterIcon,
     href: siteConfig.links.twitter,
-    displayValue: "Zimam0905",
+    displayValue: "@zimam_legal",
+    iconComponent: MessageCircle
+  },
+  {
+    key: "tiktok" as const,
+    icon: TikTokIcon,
+    href: siteConfig.links.tiktok,
+    displayValue: "@zimam_legal",
     iconComponent: MessageCircle
   }
 ];
